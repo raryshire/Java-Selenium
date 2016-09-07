@@ -6,8 +6,8 @@ import java.net.URL;
 
 public class SampleSauceTest {
 
-  public static final String USERNAME = "YOUR_USERNAME";
-  public static final String ACCESS_KEY = "YOUR_ACCESS_KEY";
+  public static final String USERNAME = "raryshire";
+  public static final String ACCESS_KEY = "31a0c9f0-7618-48d1-9012-62c8f704ada2";
   public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
 
   public static void main(String[] args) throws Exception {
