@@ -102,29 +102,9 @@ public class SampleSauceTest implements SauceOnDemandSessionIdProvider {
     
     @Test
     public void GoogleTest() {
-        driver.get("https://www.google.co.in/?gfe_rd=cr&ei=HFzSV9ODFufA8geX-4ToCA");
-        driver.findElement(By.xpath("//div[@id='lga']/div")).click();
-        driver.findElement(By.id("sb_ifc0")).click();
-        driver.findElement(By.id("lst-ib")).click();
-        driver.findElement(By.id("lst-ib")).clear();
-        driver.findElement(By.id("lst-ib")).sendKeys("Saucelabs Test");
-        driver.findElement(By.id("lst-ib")).click();
-        driver.findElement(By.id("lst-ib")).sendKeys("\n");
-        driver.findElement(By.linkText("Sauce Labs: Cross Browser Testing, Selenium Testing, and Mobile ...")).click();
-        driver.findElement(By.linkText("SIGN IN")).click();
-        driver.findElement(By.name("username")).click();
-        driver.findElement(By.name("username")).clear();
-        driver.findElement(By.name("username")).sendKeys("raryshire");
-        driver.findElement(By.name("password")).click();
-        driver.findElement(By.name("password")).clear();
-        driver.findElement(By.name("password")).sendKeys("maggieBless271\\");
-        driver.findElement(By.id("submit")).click();
-        driver.findElement(By.linkText("Automated Builds")).click();
-        driver.findElement(By.linkText("TestGit1 Run 3")).click();
-        driver.findElement(By.linkText("Dashboard")).click();
-        if (!driver.findElement(By.tagName("html")).getText().contains("Automated Builds")) {
-            System.out.println("verifyTextPresent failed");
-        }
+        driver.get("http://www.google.com/");
+        assertEquals("Google", driver.getTitle());
+        driver.get("https://www.google.co.in/?gfe_rd=cr&ei=SKTGV4LWNouCvAT2iYEQ");
     }
     
 
