@@ -1,11 +1,14 @@
 @RunWith(ConcurrentParameterized.class)
 public class SampleSauceTest implements SauceOnDemandSessionIdProvider {
 
+    public static final String USERNAME = "raryshire";
+    public static final String ACCESS_KEY = "31a0c9f0-7618-48d1-9012-62c8f704ada2";
+    
     /**
      * Constructs a {@link SauceOnDemandAuthentication} instance using the supplied user name/access key.  To use the authentication
      * supplied by environment variables or from an external file, use the no-arg {@link SauceOnDemandAuthentication} constructor.
      */
-    public SauceOnDemandAuthentication authentication = new SauceOnDemandAuthentication("YOUR_USERNAME", "YOUR_ACCESS_KEY");
+    public SauceOnDemandAuthentication authentication = new SauceOnDemandAuthentication(USERNAME, ACCESS_KEY);
 
     /**
      * JUnit Rule which will mark the Sauce Job as passed/failed when the test succeeds or fails.
